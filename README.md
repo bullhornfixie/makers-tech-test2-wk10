@@ -8,7 +8,7 @@ The purpose of this exercise was to take some legacy code and refactor it, using
 * The Gilded Rose does a stock take every night on items it sells.
 * Each item has a sell_in value and quality value.
 * The majority of items decrease in sell_in and quality value every night (with some exceptions on special items).
-* On the item "Elixir of the Mongoose" the **sell_in** and *quality **value** reduces by -1 on a stock update.
+* On the item "Elixir of the Mongoose" the sell_in and quality value reduces by -1 on a stock update.
 * The below example shows the legacy code run in IRB.
 
 ```
