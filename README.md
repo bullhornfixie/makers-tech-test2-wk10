@@ -24,14 +24,12 @@ inn.update_quality()
 
 ## My Approach 
 
-There are multiple languages you can attempt this challnge in and my preference was Ruby. I decided to focus on a test-first approach, making sure first that the current code was working. 
+There are multiple languages you can attempt this challenge in and my preference was Ruby. I decided to focus on a **test-first approach**, making sure first that the current code was working. 
 
 First, I wrote tests covering all scenarios for the legacy code. This gave me a thorough understanding of the program before I started refactoring and meant the testing process was accelerated as the existing tests written just needed to be updated.
 
-As you can see from the initial run of the legacy code in IRB, there is single function ```update_quality``` for updating both the sell_in and quality value on an multiple items which was a juicy amount of code! 
-
-My initial thought was to split the update into two methods. Once the update quality method finished executing, it would then 
-update the quality value. This would be a starting point which would enable to reveal some further refactoring opportunities. 
+Starting point was to split the update_quality method into two methods: update_quality_value and update_sell_in_value.
+This would give me a clearer view on how to structure the additional methods to account for each sceanrio on the various items and unearth further refactoring opportunities. 
 
 End goal, single public method being required to update the stock of the famous Gilded Rose!
 
