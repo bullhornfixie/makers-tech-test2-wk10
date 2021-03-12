@@ -24,6 +24,7 @@ class GildedRose
       when item.name == 'Aged Brie' then aged_brie_update(item)
       when item.name == 'Backstage passes to a TAFKAL80ETC concert' then backstage_passes_update(item)
       when item.name == 'Sulfuras, Hand of Ragnaros' then item.quality = item.quality 
+      when item.name.include?('Conjured') then conjured_item_update(item)
     else 
       standard_item_update(item)
     end
@@ -49,6 +50,13 @@ class GildedRose
     case 
       when item.quality > MIN && item.sell_in < 0 then item.quality -= 2
       when item.quality > MIN && item.sell_in > 0 then item.quality -= 1
+    end 
+  end 
+
+  def conjured_item_update(item)
+    case 
+      when item.quality > MIN && item.sell_in < 0 then item.quality -= 4
+      when item.quality > MIN && item.sell_in > 0 then item.quality -= 2
     end 
   end 
 end 

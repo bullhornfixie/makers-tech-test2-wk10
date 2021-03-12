@@ -98,7 +98,19 @@ describe GildedRose do
       end
     end
   end
-end
+
+  describe '#update_quality' do 
+    context 'when the item is a conjured item' do 
+
+      it 'reduces the quality x2 after a stock update' do
+        items = [Item.new(name="Conjured Mana Cake", sell_in=3, quality=6)]
+        GildedRose.new(items).stock_update()
+        expect(items[0].quality).to eq 4
+      end
+    end 
+  end
+end 
+
 
 
 
