@@ -48,7 +48,22 @@ end
   end 
 end
 
+  describe '#update_quality' do 
+    context 'when the item is Sulfuras, Hand of Ragnaros' do 
 
+    it 'has a quality value of 80 which never alters' do 
+      items = [Item.new(name="Sulfuras, Hand of Ragnaros", sell_in=-1, quality=80)]
+      GildedRose.new(items).update_quality()
+      expect(items[0].quality).to eq 80
+    end
+
+    it 'had a sell_in value which never alters' do 
+      items = [Item.new(name="Sulfuras, Hand of Ragnaros", sell_in=-1, quality=80)]
+      GildedRose.new(items).update_quality()
+      expect(items[0].sell_in).to eq -1
+    end
+  end 
+end
 end
 
 
