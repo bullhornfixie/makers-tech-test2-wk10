@@ -98,27 +98,9 @@ describe GildedRose do
       end
     end
   end
-
-  describe '#update_sell_in' do 
-    it 'updates the sell_in value by -1 unless Sulfuras, Hand of Ragnaros' do 
-      items = [Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=0, quality=20)]
-        GildedRose.new(items).stock_update()
-        expect(items[0].sell_in).to eq -1
-    end
-  end 
-
-  describe '#update_quality' do 
-    context 'when the item is Aged Brie' do
-
-      it 'increases in quality value as it gets older' do
-        items = [Item.new(name="Aged Brie", sell_in=2, quality=0)]
-        GildedRose.new(items).stock_update()
-        expect(items[0].quality).to eq 1
-        expect(items[0].sell_in).to eq 1
-      end 
-    end
-  end
 end
+
+
 
 
 
