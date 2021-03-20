@@ -40,3 +40,11 @@ End goal, single public method being required to update the stock of the famous 
 3. Run ```rspec``` in your cmd line to run all tests which should pass first time.
 4. You can test-drive the Giled Rose yourself! Use IRB.
 
+## Makers Review Of My Tech Test 
+
+* Great work on your Gilded Rose submission, I thought it was very well done. Here are just a couple of notes on it:
+* Nice work on covering the existing code with tests before getting started with the refactoring!
+* Nice use of switches to make really well readable methods, over if/elses. I think your methods in GildedRose are really concise and cleanly written.
+* There are a couple of magic numbers dotted around that you could also assign to constants: https://en.wikipedia.org/wiki/Magic_number_(programming)
+* You probably don’t need multiple describe blocks for #update_quality tests, as the context blocks separating the tests for different items will be enough organisation to make them easily readable.
+* Really comprehensive unit testing, nice work.
